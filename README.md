@@ -13,3 +13,7 @@ Automated Testing of Web Applications using Selenium Tool and TestNG Framework.
 7. TestNG Framework added to Eclipse IDE
 
 Link for [TestNG Configuration](https://www.toolsqa.com/selenium-webdriver/install-testng/)
+
+## References 
+
+Link for [reference](https://www.toolsqa.com/)
