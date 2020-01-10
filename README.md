@@ -20,4 +20,4 @@ Link for [reference](https://www.toolsqa.com/)
 
 ## How to Contribute
 
-[Contribution Guidelines](CONTRIBUTING.md)
+[Contribution Guidelines to be followed](CONTRIBUTING.md)
