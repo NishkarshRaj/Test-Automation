@@ -17,3 +17,7 @@ Link for [TestNG Configuration](https://www.toolsqa.com/selenium-webdriver/insta
 ## References 
 
 Link for [reference](https://www.toolsqa.com/)
+
+## How to Contribute
+
+[Contribution Guidelines](CONTRIBUTING.md)
