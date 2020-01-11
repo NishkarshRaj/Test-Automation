@@ -14,10 +14,12 @@ Automated Testing of Web Applications using Selenium Tool and TestNG Framework.
 
 Link for [TestNG Configuration](https://www.toolsqa.com/selenium-webdriver/install-testng/)
 
-## References 
-
-Link for [reference](https://www.toolsqa.com/)
 
 ## How to Contribute
 
 [Contribution Guidelines to be followed](CONTRIBUTING.md)
+
+## References 
+
+Link for [reference](https://www.toolsqa.com/)
+
