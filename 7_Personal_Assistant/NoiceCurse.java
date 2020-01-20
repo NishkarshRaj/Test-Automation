@@ -10,9 +10,22 @@ public class NoiceCurse
 {
 	public static void profilevisitor(int ch)
 	{
+		String website="https://www.google.com";
 		System.setProperty("webdriver.chrome.driver", "D:\\UPES DevOps\\DevOps Sem 6\\Test Automation\\Softwares\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.navigate().to("https://www.github.com/NishkarshRaj");
+		switch(ch)
+		{
+		case 1: website = "https://github.com/NishkarshRaj";
+			break;
+		case 2: website = "https://www.linkedin.com/in/nishkarshraj/";
+			break;
+		case 3: website = "https://twitter.com/NishkarshRaj1";
+			break;
+		case 4: website = "https://www.instagram.com/nishkarshraj_/";
+			break;
+		default: System.out.println("Master! I assume you entered an invalid input! So I am taking you to Google! Learn how to read from there!!");
+		}
+		driver.navigate().to(website);
 		driver.manage().window().maximize();
 	}
 	public static void optionmenu()
@@ -28,7 +41,6 @@ public class NoiceCurse
 		// Declarations
 		Scanner reader = new Scanner(System.in);
 		int choice1, choice2;
-		String website;
 		
 		// Bot NoiceCurse introduction
 		System.out.println("Hi there! My name is NoiceCurse. I am your personal Assistant!");
