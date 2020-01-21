@@ -8,6 +8,7 @@ import java.util.*;
 
 public class NoiceCurse 
 {
+	//Function for Profile Visitor
 	public static void profilevisitor(int ch)
 	{
 		String website="https://www.google.com";
@@ -28,6 +29,30 @@ public class NoiceCurse
 		driver.navigate().to(website);
 		driver.manage().window().maximize();
 	}
+	
+	//Function for Login Helper
+	public static void loginhelper(int ch)
+	{
+		String website="https://www.google.com";
+		System.setProperty("webdriver.chrome.driver", "D:\\UPES DevOps\\DevOps Sem 6\\Test Automation\\Softwares\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		switch(ch)
+		{
+		case 1: website = "https://github.com/";
+			break;
+		case 2: website = "https://www.linkedin.com";
+			break;
+		case 3: website = "https://twitter.com";
+			break;
+		case 4: website = "https://www.instagram.com";
+			break;
+		default: System.out.println("Master! I assume you entered an invalid input! So I am taking you to Google! Learn how to read from there!!");
+		}
+		driver.navigate().to(website);
+		driver.manage().window().maximize();
+	}
+	
+	//Function for Option Menu
 	public static void optionmenu()
 	{
 		System.out.println("Following options are available: ");
@@ -36,6 +61,8 @@ public class NoiceCurse
 		System.out.println("3) Twitter");
 		System.out.println("4) Instagram");
 	}
+	
+	//Driver Code
 	public static void main(String [] args)
 	{
 		// Declarations
@@ -59,9 +86,10 @@ public class NoiceCurse
 			break;
 		case 2: System.out.println("Login requires critical information! Always try to keep this away from me in an encrypted file but to train me to decrypt it :)");
 		optionmenu();
+		choice2 = reader.nextInt();
+		loginhelper(choice2);
 			break;
 		default: System.out.println("Wrong Choice! Good Bye Master");
 		}
-		
 	}
 }
