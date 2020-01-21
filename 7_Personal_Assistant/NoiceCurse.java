@@ -55,8 +55,13 @@ public class NoiceCurse
 		element.sendKeys("Ni$hkar$h3");
 		//driver.findElement(By.aria-label("Sign In")).click(); //LinkedIn does not use name nor id
 			break;
-		case 3: website = "https://twitter.com";
+		case 3: website = "https://twitter.com/login";
 		driver.navigate().to(website);
+		element = driver.findElement(By.name("session[username_or_email]"));
+		element.sendKeys("nishkarshraj000@gmail.com");
+		element = driver.findElement(By.name("session[password]")); //Twitter Also does not use name or id for button
+		element.sendKeys("Ni$hkar$h41");
+		//driver.findElement(By.name("commit")).click(); //Twitter Also does not use name or id for button
 			break;
 		case 4: website = "https://www.instagram.com";
 		driver.navigate().to(website);
