@@ -36,9 +36,15 @@ public class NoiceCurse
 		String website="https://www.google.com";
 		System.setProperty("webdriver.chrome.driver", "D:\\UPES DevOps\\DevOps Sem 6\\Test Automation\\Softwares\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
+		WebElement element; 
 		switch(ch)
 		{
-		case 1: website = "https://github.com/";
+		case 1: website = "https://github.com/login";
+		element = driver.findElement(By.name("login"));
+		element.sendKeys("NishkarshRaj");
+		element = driver.findElement(By.name("password"));
+		element.sendKeys("Ni$hkar$h3");
+		driver.findElement(By.name("commit")).click();
 			break;
 		case 2: website = "https://www.linkedin.com";
 			break;
