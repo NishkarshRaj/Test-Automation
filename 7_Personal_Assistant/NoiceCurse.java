@@ -49,6 +49,11 @@ public class NoiceCurse
 			break;
 		case 2: website = "https://www.linkedin.com/login";
 		driver.navigate().to(website);
+		element = driver.findElement(By.id("username"));
+		element.sendKeys("nishkarshraj@gmail.com");
+		element = driver.findElement(By.id("password"));
+		element.sendKeys("Ni$hkar$h3");
+		//driver.findElement(By.aria-label("Sign In")).click(); //LinkedIn does not use name nor id
 			break;
 		case 3: website = "https://twitter.com";
 		driver.navigate().to(website);
