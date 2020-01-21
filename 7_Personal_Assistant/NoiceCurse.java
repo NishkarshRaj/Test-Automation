@@ -40,21 +40,24 @@ public class NoiceCurse
 		switch(ch)
 		{
 		case 1: website = "https://github.com/login";
+		driver.navigate().to(website);
 		element = driver.findElement(By.name("login"));
-		element.sendKeys("NishkarshRaj");
+		element.sendKeys("500060720@stu.upes.ac.in");
 		element = driver.findElement(By.name("password"));
 		element.sendKeys("Ni$hkar$h3");
 		driver.findElement(By.name("commit")).click();
 			break;
-		case 2: website = "https://www.linkedin.com";
+		case 2: website = "https://www.linkedin.com/login";
+		driver.navigate().to(website);
 			break;
 		case 3: website = "https://twitter.com";
+		driver.navigate().to(website);
 			break;
 		case 4: website = "https://www.instagram.com";
+		driver.navigate().to(website);
 			break;
 		default: System.out.println("Master! I assume you entered an invalid input! So I am taking you to Google! Learn how to read from there!!");
 		}
-		driver.navigate().to(website);
 		driver.manage().window().maximize();
 	}
 	
