@@ -63,8 +63,13 @@ public class NoiceCurse
 		element.sendKeys("Ni$hkar$h41");
 		//driver.findElement(By.name("commit")).click(); //Twitter Also does not use name or id for button
 			break;
-		case 4: website = "https://www.instagram.com";
+		case 4: website = "https://www.instagram.com/accounts/login/";
 		driver.navigate().to(website);
+		element = driver.findElement(By.name("username"));
+		element.sendKeys("nishkarshraj_");
+		element = driver.findElement(By.name("password"));
+		element.sendKeys("Ni$hkar$h3");
+		//driver.findElement(By.name("commit")).click();
 			break;
 		default: System.out.println("Master! I assume you entered an invalid input! So I am taking you to Google! Learn how to read from there!!");
 		}
