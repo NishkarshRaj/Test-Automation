@@ -17,7 +17,7 @@ Link for [TestNG Configuration](https://www.toolsqa.com/selenium-webdriver/insta
 
 ## How to Contribute
 
-Contribution in all forms are welcomed. Contribution [Guidelines](CONTRIBUTING.md) to be followed.
+Contributions in all forms are welcomed. Contribution [Guidelines](CONTRIBUTING.md) to be followed.
 
 ## References 
 
