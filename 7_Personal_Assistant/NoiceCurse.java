@@ -53,7 +53,7 @@ public class NoiceCurse
 		element.sendKeys("nishkarshraj@gmail.com");
 		element = driver.findElement(By.id("password"));
 		element.sendKeys("Ni$hkar$h3");
-		//driver.findElement(By.aria-label("Sign In")).click(); //LinkedIn does not use name nor id
+		driver.findElement(By.xpath("/html/body/div/main/div/form/div[3]/button")).click(); 
 			break;
 		case 3: website = "https://twitter.com/login";
 		driver.navigate().to(website);
