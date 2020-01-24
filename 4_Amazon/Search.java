@@ -13,7 +13,9 @@ public class Search
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		WebElement element; 
-		element = driver.findElement(By.id("twotabsearchtextbox"));
+		//element = driver.findElement(By.id("twotabsearchtextbox"));
+		//Accessing Search bar by Xpath
+		element = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[3]/div[1]/input"));
 		element.sendKeys("Lenovo Laptop");
 		element.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input")).click();
 		driver.manage().window().maximize();
