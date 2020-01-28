@@ -8,7 +8,7 @@ Download the Internet Explorer Driver from this link.
 
 ## Download compatible Selenium Standalone Server
 
-Download the Selenium Standalone Server from this link.
+Download the Selenium Standalone Server from this [link]().
 
 ## Launch the Internet Driver Server on a certain port
 
@@ -18,4 +18,4 @@ $ IEDriverServer.exe /port=<<port number>> /log-level=DEBUG
 
 ## Write your Java code in Selenium Java project
 
-Refer the following code.
+Refer the following [code](8_IEDriverServer/IEConnection.java).
