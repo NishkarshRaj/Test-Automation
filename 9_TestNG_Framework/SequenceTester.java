@@ -1,3 +1,5 @@
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
@@ -16,6 +18,11 @@ public class SequenceTester
 	{
 		System.out.println("Before Test");
 	}
+	@BeforeClass
+	public void beforeclass()
+	{
+		System.out.println("Before Class");
+	}
   @Test
   public void test() 
   {
@@ -31,4 +38,9 @@ public class SequenceTester
 	{
 		System.out.println("After Suite");
 	}
+  @AfterClass
+ 	public void afterclass()
+ 	{
+ 		System.out.println("After Class");
+ 	} 
 }
