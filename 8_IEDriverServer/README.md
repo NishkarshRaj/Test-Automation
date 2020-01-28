@@ -8,7 +8,7 @@ Download the Internet Explorer Driver from this [link](8_IEDriverServer/Software
 
 ## Download compatible Selenium Standalone Server
 
-Download the Selenium Standalone Server from this [link]().
+Download the Selenium Standalone Server from this [link](8_IEDriverServer/Softwares/selenium-server-standalone-2.48.0.jar).
 
 ## Launch the Internet Driver Server on a certain port
 
