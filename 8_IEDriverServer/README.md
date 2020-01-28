@@ -1,0 +1,21 @@
+# Internet Explorer Driver Server
+
+Since Internet Explorer has no inbuilt support for Web Driver interface of Selenium Web Driver or calling via Java API, Selenium created a specialized server called IEDriverServer which is used for communication between Internet Explorer and Selenium Java.
+
+## Download IEDriverServer
+
+Download the Internet Explorer Driver from this link.
+
+## Download compatible Selenium Standalone Server
+
+Download the Selenium Standalone Server from this link.
+
+## Launch the Internet Driver Server on a certain port
+
+```
+$ IEDriverServer.exe /port=1080 /log-level=DEBUG
+```
+
+## Write your Java code in Selenium Java project
+
+Refer the following code.
