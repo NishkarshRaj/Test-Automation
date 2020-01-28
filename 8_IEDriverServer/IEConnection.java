@@ -3,13 +3,13 @@ public class IEConnection
 {
 	public static void main(String[] args) 
 	{
-		 String exePath = "D:\\UPES DevOps\\DevOps Sem 6\\Test Automation\\Softwares\\InternetExplorer\\IEDriverServer.exe";
+		 String exePath = "<<path to executable>>\\IEDriverServer.exe";
 		 InternetExplorerDriverService.Builder serviceBuilder = new InternetExplorerDriverService.Builder();
-		 serviceBuilder.usingPort(1080); // This specifies that sever should start at this port
-		 serviceBuilder.usingDriverExecutable(new File(exePath)); //Tell it where you server exe is
+		 serviceBuilder.usingPort(<<Port_Number>>); 
+		 serviceBuilder.usingDriverExecutable(new File(exePath)); 
 		 serviceBuilder.withHost("2.45.0.0");
-		 InternetExplorerDriverService service = serviceBuilder.build(); //Create a driver service and pass it to Internet explorer driver instance
+		 InternetExplorerDriverService service = serviceBuilder.build();
 		 InternetExplorerDriver driver = new InternetExplorerDriver(service);
-		 driver.get("http://toolsqa.com");
+		 driver.get("https://www.github.com/NishkarshRaj");
 	}
 }
