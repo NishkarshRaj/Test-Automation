@@ -4,7 +4,7 @@ Since Internet Explorer has no inbuilt support for Web Driver interface of Selen
 
 ## Download IEDriverServer
 
-Download the Internet Explorer Driver from this link.
+Download the Internet Explorer Driver from this [link](8_IEDriverServer/Softwares/IEDriverServer.exe).
 
 ## Download compatible Selenium Standalone Server
 
