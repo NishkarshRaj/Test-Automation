@@ -1,5 +1,7 @@
+// Class Annotation belongs to Junit
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+// Suite Level -> Suite and Test Annotation belong to testng.annotations
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
