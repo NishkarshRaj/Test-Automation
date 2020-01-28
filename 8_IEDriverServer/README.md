@@ -13,7 +13,7 @@ Download the Selenium Standalone Server from this link.
 ## Launch the Internet Driver Server on a certain port
 
 ```
-$ IEDriverServer.exe /port=1080 /log-level=DEBUG
+$ IEDriverServer.exe /port=<<port number>> /log-level=DEBUG
 ```
 
 ## Write your Java code in Selenium Java project
