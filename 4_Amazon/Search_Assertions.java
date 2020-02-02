@@ -1,5 +1,6 @@
 package amazon;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,5 +30,14 @@ public class Search
 		//Checking which page the driver is at!!!
 		String currenturl = driver.getCurrentUrl();
 		System.out.println(currenturl); //path of original page! So when a new tab is opened, the driver is still in the previous tab :(
+		
+		//Trying to Switch Tabs
+		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"\t");
+		driver.switchTo().defaultContent();
+		currenturl = driver.getCurrentUrl();
+		System.out.println(currenturl);
+	
+		//Closing the Google Chrome browser
+		driver.quit();
 	}
 }
