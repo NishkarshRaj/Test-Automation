@@ -32,8 +32,14 @@ public class Search
 		String currenturl = driver.getCurrentUrl();
 		System.out.println(currenturl); //path of original page! So when a new tab is opened, the driver is still in the previous tab :(
 		
+		/*
 		//Trying to Switch Tabs
-		driver.findElement(By.xpath("body")).sendKeys(Keys.CONTROL, Keys.PAGE_DOWN);
+		driver.findElement(By.xpath("/html/body")).sendKeys(Keys.CONTROL, Keys.PAGE_DOWN);
+		*/
+		
+		//Trying to Switch Tabs
+		
+		//Check if Tab changes?
 		currenturl = driver.getCurrentUrl();
 		System.out.println(currenturl);
 		
