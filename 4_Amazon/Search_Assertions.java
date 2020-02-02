@@ -20,7 +20,14 @@ public class Search
 		//Assert.assertFalse(str.contains("Lenovo Legion Y540")); If false, do not proceed forward in code
 		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
 		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[4]/div[1]/div[1]/div/span/div/div/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")).click();
-		str = driver.findElement(By.xpath("/html/body")).getText();
+		
+		/* The following lines are causing error because we are shifting web pages in a new tab rather than opening them in the same tab
+		str = driver.findElement(By.xpath("//*[@id=\"productTitle\"]")).getText();
 		System.out.println(str);
+		*/
+		
+		//Checking which page the driver is at!!!
+		String currenturl = driver.getCurrentUrl();
+		System.out.println(currenturl); //path of original page! So when a new tab is opened, the driver is still in the previous tab :(
 	}
 }
