@@ -26,7 +26,14 @@ public class Search
 		driver.get("https://www.amazon.in/Lenovo-Legion-Graphics-Windows-81SY00CKIN/dp/B07W6H9YM9/ref=sr_1_1_sspa?keywords=Lenovo+legion+y540&qid=1580636280&smid=A14CZOWI0VEHLG&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzSUpCUzVXM1dHOFdHJmVuY3J5cHRlZElkPUEwOTkxNDQxM0NINzFZRExQWUpQTCZlbmNyeXB0ZWRBZElkPUEwMDM5Njc0MVpJRkUwOERWSTNXSSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=");
 		
 		//Assertions!
+		str = driver.findElement(By.id("productTitle")).getText();
+		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
+
+		// Check if all tests are passed by printing HelloWorld at last
+		System.out.println("Hello, World!");
 		
+		// Close the driver
+		driver.quit();
 		
 		/*
 		//Click on item to open it in new tab 
