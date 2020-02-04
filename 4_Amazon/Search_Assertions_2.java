@@ -34,9 +34,9 @@ public class Search
 	    //Assertions!
 		str = driver.findElement(By.id("productTitle")).getText();
 		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
-		/*
-		str = driver.findElement(By.id("priceblock_dealprice_lbl")).getText();
+		str = driver.findElement(By.id("priceblock_ourprice_lbl")).getText();
 		Assert.assertTrue(str.contains("Price"));
+		/*
 		str = driver.findElement(By.xpath("//*[@id=\"ddmDeliveryMessage\"]")).getText();
 		Assert.assertTrue(str.contains("Delivery"));
 		//str = driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).getText(); //Button elements cannot check content. Check if enabled
