@@ -22,10 +22,15 @@ public class Search
 		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
 		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[4]/div[1]/div[1]/div/span/div/div/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")).click();
 
-	   //Thread.sleep(10000);
-	   ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
-	   driver.switchTo().window(tabs2.get(1));
-	   
+     	//Thread.sleep(10000);
+	    ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+	    driver.switchTo().window(tabs2.get(1));
+	    
+	    //Check if tabs got changed
+	    str = driver.getCurrentUrl();
+	    System.out.println(str);
+	    
+	    /*
 	    //Assertions!
 		str = driver.findElement(By.id("productTitle")).getText();
 		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
@@ -36,11 +41,12 @@ public class Search
 		//str = driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).getText(); //Button elements cannot check content. Check if enabled
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).isEnabled());
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"buy-now-button\"]")).isEnabled());
-		
+		*/
+	    
 		// Check if all tests are passed by printing HelloWorld at last
 		System.out.println("Hello, World!");
 		
 		// Close the driver
-		driver.quit();
+		//driver.quit();
 	}
 }
