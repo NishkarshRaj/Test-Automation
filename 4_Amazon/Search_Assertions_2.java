@@ -38,11 +38,9 @@ public class Search
 		Assert.assertTrue(str.contains("Price"));
 		str = driver.findElement(By.xpath("//*[@id=\"ddmDeliveryMessage\"]")).getText();
 		Assert.assertTrue(str.contains("Delivery"));
-		/*
 		//str = driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).getText(); //Button elements cannot check content. Check if enabled
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).isEnabled());
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"buy-now-button\"]")).isEnabled());
-		*/
 	    
 		// Check if all tests are passed by printing HelloWorld at last
 		System.out.println("Hello, World!");
