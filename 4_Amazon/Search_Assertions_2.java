@@ -30,10 +30,11 @@ public class Search
 	    str = driver.getCurrentUrl();
 	    System.out.println(str);
 	    
-	    /*
+	    
 	    //Assertions!
 		str = driver.findElement(By.id("productTitle")).getText();
 		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
+		/*
 		str = driver.findElement(By.id("priceblock_dealprice_lbl")).getText();
 		Assert.assertTrue(str.contains("Price"));
 		str = driver.findElement(By.xpath("//*[@id=\"ddmDeliveryMessage\"]")).getText();
@@ -47,6 +48,6 @@ public class Search
 		System.out.println("Hello, World!");
 		
 		// Close the driver
-		//driver.quit();
+		driver.quit();
 	}
 }
