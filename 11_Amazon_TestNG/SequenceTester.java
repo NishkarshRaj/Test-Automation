@@ -21,11 +21,6 @@ public class SequenceTester
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\UPES DevOps\\DevOps Sem 6\\Test Automation\\Softwares\\chromedriver.exe");		
 	}
-	@BeforeTest
-	public void beforetest()
-	{
-		System.out.println("Before Test");
-	}
 	@BeforeClass
 	public void register()
 	{
@@ -76,8 +71,6 @@ public class SequenceTester
 		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[4]/div[1]/div[1]/div/span/div/div/div/div/div[2]/div[2]/div/div[1]/div/div/div[1]/h2/a/span")).click();
 		ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
 	    driver.switchTo().window(tabs2.get(1));
-	    str = driver.getCurrentUrl();
-	    System.out.println(str);
 	    str = driver.findElement(By.id("productTitle")).getText();
 		Assert.assertTrue(str.contains("Lenovo Legion Y540"));
 		str = driver.findElement(By.xpath("//*[@id=\"ddmDeliveryMessage\"]")).getText();
@@ -85,11 +78,6 @@ public class SequenceTester
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).isEnabled());
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"buy-now-button\"]")).isEnabled());
   }
-  @AfterTest
-	public void aftertest()
-	{
-		System.out.println("After Test");
-	}
   @AfterSuite
 	public void aftersuite()
 	{
