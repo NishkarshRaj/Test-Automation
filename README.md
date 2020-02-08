@@ -14,6 +14,10 @@ Automated Testing of Web Applications using Selenium Tool and TestNG Framework.
 
 Link for [TestNG Configuration](https://www.toolsqa.com/selenium-webdriver/install-testng/)
 
+## Notes
+
+1. Bots can harm the website and thus we need certifications, captchas etc. to stop them.
+2. Use the get command to wait for webpage to load rather than navigate().to() which runs through all commands.
 
 ## How to Contribute
 
