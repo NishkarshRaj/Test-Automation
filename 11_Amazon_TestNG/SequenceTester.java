@@ -8,10 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SequenceTester 
@@ -25,11 +23,6 @@ public class SequenceTester
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\UPES DevOps\\DevOps Sem 6\\Test Automation\\Softwares\\chromedriver.exe");		
 		driver = new ChromeDriver();
-	}
-	@BeforeTest
-	public void beforetest()
-	{
-		System.out.println("Before Test");
 	}
 	@BeforeClass
 	public void register()
@@ -97,11 +90,6 @@ public class SequenceTester
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).isEnabled());
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"buy-now-button\"]")).isEnabled());
   }
-  @AfterTest
-	public void aftertest()
-	{
-		System.out.println("After Test");
-	}
   @AfterSuite
 	public void aftersuite()
 	{
