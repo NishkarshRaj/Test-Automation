@@ -27,23 +27,10 @@ public class SequenceTester
 	@BeforeClass
 	public void register()
 	{
+		driver.get("https://amazon.in");
 		driver.findElement(By.id("nav-hamburger-menu")).click();
 		driver.findElement(By.xpath("//*[@id=\"hmenu-content\"]/ul[18]/li[26]/a")).click();
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/span/span/a")).click();
-		 
-		
-		//Assertions
-		str = driver.findElement(By.xpath("//*[@id=\"ap_register_form\"]/div/div/h1")).getText();
-		Assert.assertTrue(str.contains("Create"));
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"continue\"]")).isEnabled());
-		str = driver.findElement(By.xpath("//*[@id=\"ap_register_form\"]/div/div/div[2]/div/label")).getText();
-		Assert.assertTrue(str.contains("Mobile"));
-		str = driver.findElement(By.xpath("//*[@id=\"ap_register_form\"]/div/div/div[3]/div/label")).getText();
-		Assert.assertTrue(str.contains("Email"));
-		str = driver.findElement(By.xpath("//*[@id=\"ap_register_form\"]/div/div/div[4]/div/label")).getText();
-		Assert.assertTrue(str.contains("Password"));
-		
-		//Register
 		element = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/form/div/div/div[1]/input"));
 		element.sendKeys("Raj Khare");
 		element = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/form/div/div/div[2]/div/div/div/div[2]/input"));
