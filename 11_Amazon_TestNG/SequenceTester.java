@@ -16,6 +16,10 @@ import org.testng.annotations.Test;
 
 public class SequenceTester 
 {
+	public static String str;
+	public static WebDriver driver;
+	public static WebElement element;
+	
 	@BeforeSuite
 	public void initialization()
 	{
@@ -29,15 +33,14 @@ public class SequenceTester
 	@BeforeClass
 	public void register()
 	{
-		WebDriver driver=new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get("https://amazon.in");
 		driver.findElement(By.id("nav-hamburger-menu")).click();
 		driver.findElement(By.xpath("//*[@id=\"hmenu-content\"]/ul[18]/li[26]/a")).click();
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/span/span/a")).click();
-		WebElement element; 
+		 
 		
 		//Assertions
-		String str;
 		str = driver.findElement(By.xpath("//*[@id=\"ap_register_form\"]/div/div/h1")).getText();
 		Assert.assertTrue(str.contains("Create"));
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"continue\"]")).isEnabled());
@@ -63,14 +66,26 @@ public class SequenceTester
 	@BeforeMethod
 	public void Login()
 	{
-		WebDriver driver=new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.navigate().to("https://www.amazon.in/");
 		driver.manage().window().maximize();
-		WebElement element; 
 		driver.findElement(By.id("nav-signin-tooltip")).click();
+		
+		//Assertions
+		//str = driver.findElement(By.xpath("//*[@id=\"authportal-main-section\"]/div[2]/div/div[1]/form/div/div/div/h1")).getText();
+		//Assert.assertTrue(str.contains("Login"));
+		//Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"continue\"]")).isEnabled());
+		
+		//Login
 		element = driver.findElement(By.id("ap_email"));
 		element.sendKeys("9005445752");
 		driver.findElement(By.id("continue")).click();
+		
+		//Assertions
+		//str = driver.findElement(By.xpath("//*[@id=\"authportal-main-section\"]/div[2]/div[1]/div/div/form/div/div[1]/div[1]/div[1]/label")).getText();
+		//Assert.assertTrue(str.contains("Password"));
+		//Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"signInSubmit\"]")).isEnabled());
+		
 		element = driver.findElement(By.id("ap_password"));
 		element.sendKeys("Ni$hkar$h1");
 		driver.findElement(By.id("signInSubmit")).click();
@@ -78,10 +93,8 @@ public class SequenceTester
   @Test
   public static void search() 
   {
-	  	String str;
-	  	WebDriver driver=new ChromeDriver();
-		driver.get("https://www.amazon.in/");
-		WebElement element; 
+	  driver = new ChromeDriver();
+	  	driver.get("https://www.amazon.in/");
 		element = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[3]/div[1]/input"));
 		element.sendKeys("Lenovo legion y540");
 		element.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/form/div[2]/div/input")).click();
@@ -119,6 +132,5 @@ public class SequenceTester
 	public void aftermethod()
 	{
 		System.out.println("After Method");
-		//driver.quit();
 	}
 }
