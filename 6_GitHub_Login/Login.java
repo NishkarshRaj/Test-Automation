@@ -13,9 +13,9 @@ public class Login
 		driver.manage().window().maximize();
 		WebElement element; 
 		element = driver.findElement(By.name("login"));
-		element.sendKeys("500060720@stu.upes.ac.in");
+		element.sendKeys("<<Username/Email>>");
 		element = driver.findElement(By.name("password"));
-		element.sendKeys("Ni$hkar$h3");
+		element.sendKeys("<<Password>>");
 		driver.findElement(By.name("commit")).click();
 	}
 }

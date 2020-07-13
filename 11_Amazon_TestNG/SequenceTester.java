@@ -49,10 +49,10 @@ public class SequenceTester
 		driver.manage().window().maximize();
 		driver.findElement(By.id("nav-signin-tooltip")).click();
 		element = driver.findElement(By.id("ap_email"));
-		element.sendKeys("9005445752");
+		element.sendKeys("<<phone or email>>");
 		driver.findElement(By.id("continue")).click();
 		element = driver.findElement(By.id("ap_password"));
-		element.sendKeys("Ni$hkar$h1");
+		element.sendKeys("<<password>>");
 		driver.findElement(By.id("signInSubmit")).click();
 	}
   @Test

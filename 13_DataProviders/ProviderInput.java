@@ -11,8 +11,8 @@ class Input {
 	 @DataProvider(name="getData")
 		public Object[][] getData(){
 		Object[][] obj = new Object[1][2];
-		obj[0][0] = "nishkarshraj000@gmail.com";
-		obj[0][1] = "Nish123!@#";
+		obj[0][0] = "<<ID>>";
+		obj[0][1] = "<<Password>>";
 		return obj;
 		}
 	}
